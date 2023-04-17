@@ -27,3 +27,6 @@ bootloader.o : %.o : %.S
 
 clean:
 	rm -f *.bin *.o
+
+run:
+	qemu-system-i386 -drive format=raw,file=bootloader.bin -net none
