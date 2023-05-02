@@ -8,4 +8,4 @@ run :
 .PHONY: clean
 
 clean:
-	rm -rf *.bin *.o *.s hex2bin
+	rm -f *.bin *.o *.s hex2bin
