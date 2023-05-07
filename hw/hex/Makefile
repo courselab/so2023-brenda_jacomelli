@@ -1,9 +1,11 @@
-all: 
-	gcc -o hex2bin hex2bin.c 
-	./hex2bin
+hex2bin: hex2bin.c
+	gcc -o $@ $<
 
-run : 
-	qemu-system-i386 -drive format=raw,file=hw.bin -net none
+hw.bin: hex2bin
+	./$<
+
+run : hw.bin
+	qemu-system-i386 -drive format=raw,file=$< -net none
 
 .PHONY: clean
 
