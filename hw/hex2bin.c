@@ -12,7 +12,7 @@ int main(){
         return 0;
     }
 
-    bin_file = fopen("hw.bin", "wb");
+    bin_file = fopen("hw-hex.bin", "wb");
 
     if(hex_file == NULL){
         printf("Error opening .bin file");
